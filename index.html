@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Lateral</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    /* Barra lateral */
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      padding-top: 20px;
+      position: fixed;
+    }
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      margin: 5px 0;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+    .sidebar i {
+      margin-right: 10px;
+    }
+    /* Contenedor principal */
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      width: 100%;
+    }
+    .menu-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra Lateral -->
+  <div class="sidebar">
+    <a href="#" class="menu-item">
+      <i class="fas fa-info-circle"></i> Información
+    </a>
+    <a href="#" class="menu-item">
+      <i class="fas fa-calendar-alt"></i> Cronograma
+    </a>
+    <a href="#" class="menu-item">
+      <i class="fas fa-comment"></i> Mensajes
+    </a>
+    <a href="#" class="menu-item">
+      <i class="fas fa-users"></i> Reuniones
+    </a>
+    <a href="#" class="menu-item">
+      <i class="fas fa-folder"></i> Archivos
+    </a>
+    <a href="#" class="menu-item">
+      <i class="fas fa-check-circle"></i> Entregables
+    </a>
+  </div>
+
+  <!-- Contenido Principal -->
+  <div class="content">
+    <div class="menu-header">Contenido Principal</div>
+    <p>Haz clic en los botones del menú lateral para ver el contenido correspondiente.</p>
+  </div>
+
+  <!-- Font Awesome para los íconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
