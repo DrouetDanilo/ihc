@@ -44,3 +44,38 @@ setInterval(checkDeadlines, 86400000); // Cada 24 horas (86400000 ms)
 
 // Ejecutar la primera vez cuando la página cargue
 checkDeadlines();
+function enviarMensaje(event) {
+  event.preventDefault();
+  const mensaje = document.getElementById('inputMensaje').value;
+  const chat = document.getElementById('chatContainer');
+  const nuevoMensaje = document.createElement('div');
+  nuevoMensaje.classList.add('mensaje', 'yo');
+  nuevoMensaje.textContent = mensaje;
+  chat.appendChild(nuevoMensaje);
+  document.getElementById('inputMensaje').value = '';
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function cargarMensajes() {
+  // Aquí cargarías mensajes desde un backend si lo tuvieras
+  document.getElementById('chatContainer').innerHTML = '';
+}
+
+function crearReunion(event) {
+  event.preventDefault();
+  alert("Solicitud de reunión enviada. Espera confirmación del mentor.");
+}
+function seleccionarChat(checkbox) {
+  const checkboxes = document.querySelectorAll('input[name="chat"]');
+  checkboxes.forEach(cb => {
+    if (cb !== checkbox) cb.checked = false;
+  });
+
+  // Aquí puedes cambiar el contenido del chat según la selección
+  const conversacion = document.getElementById("contenidoChat");
+  if (checkbox.checked) {
+    conversacion.innerText = `Estás conversando con: ${checkbox.value === "mentor" ? "Mentor" : "Organizador de i3Lab"}`;
+  } else {
+    conversacion.innerText = "Selecciona con quién deseas conversar.";
+  }
+}

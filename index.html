@@ -47,6 +47,11 @@
 
       <div id="cronograma" class="section" style="display: none;">
         <h2>Cronograma del Proyecto</h2>
+          <label class="switch">
+          <input type="checkbox" id="notifSwitch" onchange="toggleNotifications(this.checked)">
+          <span class="slider round"></span>
+          <span class="switch-label">Notificaciones</span>
+          </label>
         
         <!-- Semana 1 -->
         <div class="week">
@@ -88,13 +93,74 @@
       </div>
 
       <div id="mensajes" class="section" style="display: none;">
-        <h2>Mensajes del Proyecto</h2>
-        <p>Lista de mensajes relacionados con el proyecto.</p>
-      </div>
+  <h2 style="color: red;">Chat de Tutoría</h2>
+
+  <div style="margin-bottom: 10px;">
+    <span>Conversar con:</span><br>
+    <label class="selector-chat">
+      <input type="radio" name="contacto" value="mentor" checked onclick="cargarMensajes()">
+      Mentor
+    </label>
+    <label class="selector-chat">
+      <input type="radio" name="contacto" value="organizador" onclick="cargarMensajes()">
+      Organizador de i3Lab
+    </label>
+  </div>
+
+  <div id="chatContainer" style="border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; margin-top: 10px; background: #f9f9f9;">
+    <!-- Mensajes aparecerán aquí -->
+    <div class="mensaje mentor">Hola, ¿en qué puedo ayudarte?</div>
+    <div class="mensaje yo">Tengo dudas en programación.</div>
+  </div>
+
+  <form id="formChat" onsubmit="enviarMensaje(event)" style="margin-top: 10px;">
+    <input type="text" id="inputMensaje" placeholder="Escribe tu mensaje..." required style="width: 80%;">
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</div>
+
 
       <div id="reuniones" class="section" style="display: none;">
-        <h2>Reuniones Programadas</h2>
-        <p>Lista de próximas reuniones.</p>
+        <h2>Cronograma de Reuniones</h2>
+
+  <div id="cronograma" style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+    <div class="reunion-item">
+      <strong>📅 25/07/2025</strong> - Tutoría de Programación - 10:00 AM - Modalidad: Virtual - <span style="color: green;">✔ Confirmada</span>
+    </div>
+    <div class="reunion-item">
+      <strong>📅 28/07/2025</strong> - Tutoría de Matemáticas - 3:00 PM - Modalidad: Presencial - <span style="color: red;">✖ No confirmada</span>
+    </div>
+  </div>
+
+  <h3>Solicitar Nueva Reunión</h3>
+<form id="crearReunion" onsubmit="crearReunion(event)" class="form-reunion-horizontal">
+  <div class="form-group">
+    <label>Fecha:</label>
+    <input type="date" required>
+  </div>
+
+  <div class="form-group">
+    <label>Hora:</label>
+    <input type="time" required>
+  </div>
+
+  <div class="form-group">
+    <label>Lugar:</label>
+    <input type="text" placeholder="Ej: Aula B2-204 o Google Meet" required>
+  </div>
+
+  <div class="form-group">
+    <label>Modalidad:</label>
+    <select required>
+      <option value="presencial">Presencial</option>
+      <option value="virtual">Virtual</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn">Enviar solicitud</button>
+  </div>
+</form>
       </div>
 
       <div id="archivos" class="section" style="display: none;">
