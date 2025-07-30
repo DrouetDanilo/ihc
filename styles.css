@@ -249,3 +249,172 @@ body {
   background-color: #e1e1e1;
   border-color: #999;
 }
+.tool-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.herramienta {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.herramienta:hover {
+  background-color: #3498db;
+}
+
+.visor-herramienta {
+  border: 2px dashed #999;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.recuadro-herramienta {
+  margin-top: 10px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  min-height: 150px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.archivos-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.archivos-panel-izquierdo {
+  width: 65%;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+}
+
+.archivos-lista {
+  width: 35%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.tool-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.herramienta {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.herramienta-barra {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.herramienta-editor {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-height: 400px;
+  padding: 30px;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.btn-volver {
+  background-color: #7f8c8d;
+}
+
+.btn-volver:hover {
+  background-color: #95a5a6;
+}
+.archivos-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.columna {
+  width: 50%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.columna h3 {
+  margin-top: 0;
+}
+
+.columna ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.columna ul li {
+  margin: 5px 0;
+}
+
+.tool-buttons-centered {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.herramienta {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.herramienta-barra {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.herramienta-editor {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-height: 400px;
+  padding: 30px;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.btn-volver {
+  background-color: #7f8c8d;
+}
+
+.btn-volver:hover {
+  background-color: #95a5a6;
+}

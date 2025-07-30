@@ -79,3 +79,98 @@ function seleccionarChat(checkbox) {
     conversacion.innerText = "Selecciona con quién deseas conversar.";
   }
 }
+function abrirHerramienta(tipo) {
+  const visor = document.getElementById('visorHerramienta');
+  const titulo = document.getElementById('herramientaTitulo');
+  const contenido = document.getElementById('contenidoHerramienta');
+
+  visor.style.display = 'block';
+
+  switch (tipo) {
+    case 'word':
+      titulo.textContent = 'Editor Word';
+      contenido.innerHTML = '<p>📝 Área de edición de texto simulada. Aquí puedes escribir tu documento Word.</p>';
+      break;
+    case 'excel':
+      titulo.textContent = 'Hoja de Cálculo Excel';
+      contenido.innerHTML = '<p>📊 Área de hojas de cálculo simulada. Aquí puedes organizar tus datos.</p>';
+      break;
+    case 'powerpoint':
+      titulo.textContent = 'Presentación PowerPoint';
+      contenido.innerHTML = '<p>📽 Área de presentaciones simulada. Aquí puedes diseñar tus diapositivas.</p>';
+      break;
+    default:
+      titulo.textContent = 'Herramienta';
+      contenido.textContent = 'Aquí se mostrará la herramienta seleccionada.';
+  }
+}
+function abrirHerramienta(tipo) {
+  // Oculta el panel principal de archivos
+  document.getElementById('archivosMainView').style.display = 'none';
+  document.getElementById('herramientaVistaCompleta').style.display = 'block';
+
+  const contenido = document.getElementById('herramientaContenido');
+
+  switch (tipo) {
+    case 'word':
+      contenido.innerHTML = `<h2>📝 Editor Word</h2><p>Simulación de un documento Word. Aquí puedes escribir texto.</p>`;
+      break;
+    case 'excel':
+      contenido.innerHTML = `<h2>📊 Hoja de Cálculo Excel</h2><p>Simulación de una hoja Excel con celdas editables.</p>`;
+      break;
+    case 'powerpoint':
+      contenido.innerHTML = `<h2>📽 Presentación PowerPoint</h2><p>Simulación de diapositivas editables para tu presentación.</p>`;
+      break;
+    default:
+      contenido.innerHTML = `<p>Herramienta no reconocida.</p>`;
+  }
+}
+
+function cerrarHerramienta() {
+  document.getElementById('herramientaVistaCompleta').style.display = 'none';
+  document.getElementById('archivosMainView').style.display = 'flex';
+}
+
+function descargar() {
+  alert("Descargando archivo de la herramienta actual...");
+  // Aquí puedes implementar lógica de descarga real
+}
+
+function crearNuevo() {
+  alert("Creando nuevo documento...");
+  // Aquí puedes implementar lógica de creación real
+}
+function abrirHerramienta(tipo) {
+  document.getElementById('archivosMainView').style.display = 'none';
+  document.getElementById('herramientaVistaCompleta').style.display = 'block';
+
+  const contenido = document.getElementById('herramientaContenido');
+
+  switch (tipo) {
+    case 'word':
+      contenido.innerHTML = `<h2>📝 Editor Word</h2><p>Aquí puedes redactar tu documento Word.</p>`;
+      break;
+    case 'excel':
+      contenido.innerHTML = `<h2>📊 Hoja de Cálculo Excel</h2><p>Aquí puedes trabajar con datos tabulares.</p>`;
+      break;
+    case 'powerpoint':
+      contenido.innerHTML = `<h2>📽 Presentación PowerPoint</h2><p>Aquí puedes crear tus diapositivas.</p>`;
+      break;
+    default:
+      contenido.innerHTML = `<p>Herramienta no reconocida.</p>`;
+  }
+}
+
+function cerrarHerramienta() {
+  document.getElementById('herramientaVistaCompleta').style.display = 'none';
+  document.getElementById('archivosMainView').style.display = 'block';
+}
+
+function descargar() {
+  alert("Descargando archivo...");
+}
+
+function crearNuevo() {
+  alert("Creando nuevo documento...");
+}
+

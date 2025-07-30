@@ -163,10 +163,63 @@
 </form>
       </div>
 
-      <div id="archivos" class="section" style="display: none;">
-        <h2>Archivos Compartidos</h2>
-        <p>Documentos y archivos relevantes para el proyecto.</p>
+<div id="archivos" class="section" style="display: none;">
+  <h2>Archivos Compartidos</h2>
+
+  <!-- Vista principal con disposición en dos columnas -->
+  <div id="archivosMainView">
+    <div class="archivos-grid">
+      <div class="columna">
+        <h3>📄 Documentos de Word</h3>
+        <ul>
+          <li><a href="#">Informe_Técnico.docx</a></li>
+          <li><a href="#">Acta_Reunión_01.docx</a></li>
+        </ul>
+
+        <h3>📊 Archivos Excel</h3>
+        <ul>
+          <li><a href="#">Presupuesto_Proyecto.xlsx</a></li>
+          <li><a href="#">Cronograma_Tareas.xlsx</a></li>
+        </ul>
       </div>
+
+      <div class="columna">
+        <h3>🎞️ Videos</h3>
+        <ul>
+          <li><a href="#">Demo_Prototipo.mp4</a></li>
+          <li><a href="#">Tutorial_Configuración.mp4</a></li>
+        </ul>
+
+        <h3>📁 Talleres</h3>
+        <ul>
+          <li><a href="#">Diagrama_ER.pdf</a></li>
+          <li><a href="#">Presentación.pptx</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tool-buttons-centered">
+      <h3 style="width: 30%; text-align: left; margin-bottom: 1px;">🛠 Herramientas</h3>
+      <button onclick="abrirHerramienta('word')" class="btn herramienta">📝 Word</button>
+      <button onclick="abrirHerramienta('excel')" class="btn herramienta">📊 Excel</button>
+      <button onclick="abrirHerramienta('powerpoint')" class="btn herramienta">📽 PowerPoint</button>
+    </div>
+  </div>
+
+  <!-- Vista completa de herramienta -->
+  <div id="herramientaVistaCompleta" style="display: none;">
+    <div class="herramienta-barra">
+      <button class="btn" onclick="descargar()">⬇ Descargar</button>
+      <button class="btn" onclick="crearNuevo()">➕ Crear Nuevo</button>
+      <button class="btn btn-volver" onclick="cerrarHerramienta()">🔙 Volver</button>
+    </div>
+    <div class="herramienta-editor" id="herramientaContenido">
+      <!-- Área de trabajo de la herramienta -->
+    </div>
+  </div>
+</div>
+
+
 
       <div id="entregables" class="section" style="display: none;">
         <h2>Entregables del Proyecto</h2>
